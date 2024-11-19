@@ -89,7 +89,6 @@ const Product = () => {
     getProducts();
   }, []);
 
-  // Filter products based on selected categories and sizes
   const filteredProducts = products.filter((product) => {
     const matchesCategory =
       selectedCategories.length === 0 ||
@@ -106,9 +105,7 @@ const Product = () => {
   return (
     <div className="flex justify-center">
       <div className="container flex my-12 h-fit">
-        {/* Sidebar */}
         <div className="grid h-fit gap-12 w-[475px]">
-          {/* Categories */}
           <div>
             <p className="text-[16px] font-bold my-4">Ангилал</p>
             <div className="grid gap-1">
@@ -159,7 +156,6 @@ const Product = () => {
           </div>
         </div>
 
-        {/* Products */}
         <div className="w-full grid grid-cols-3 grid-flow-row gap-5 gap-y-10">
           {loading
             ? Array.from({ length: 6 }).map((_, index) => (
